@@ -9,8 +9,16 @@
     <style>
         body {
             font-family: 'Mukta Malar', Arial, sans-serif;
-            /* எந்தப் படங்களும் இல்லாத சுத்தமான கலர் பின்னணி */
-            background-color: #eef2f3; 
+            
+            /* நீங்கள் கொடுத்த Imgur பின்னணிப் படம் (Direct Link) */
+            background-image: url('https://i.imgur.com/vH92aM6.jpeg');
+            
+            /* படம் சீராகத் தெரிவதற்கான அமைப்புகள் */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            
             margin: 0;
             padding: 15px;
             color: #333;
@@ -19,13 +27,13 @@
         .container {
             max-width: 700px;
             margin: 40px auto;
-            background: #ffffff;
+            /* பின்புற படம் லேசாகத் தெரியுமாறு 95% வெள்ளை நிற கண்ணாடி வடிவமைப்பு */
+            background: rgba(255, 255, 255, 0.95); 
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-top: 6px solid #1a5f7a; /* கணித தீமிற்கான அடர் நீல நிற பார்டர் */
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            border-top: 6px solid #1a5f7a;
         }
-        /* CSS மூலம் மட்டுமே உருவாக்கப்பட்ட சிறிய கணித குறியீடு ஐகான் */
         .math-icon {
             width: 50px;
             height: 50px;
@@ -48,11 +56,10 @@
         }
         .subtitle {
             text-align: center;
-            color: #666;
+            color: #555;
             font-weight: bold;
             margin-bottom: 25px;
             font-size: 15px;
-            letter-spacing: 0.5px;
         }
         p {
             font-size: 16px;
@@ -70,10 +77,11 @@
             text-align: center;
             margin: 15px 0;
             transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
         }
         .btn-whatsapp:hover {
             background-color: #128C7E;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
         }
         .form-notice {
             background-color: #fff3cd;
@@ -102,19 +110,22 @@
             height: 100%;
             border: 0;
         }
+        /* தொடர்புகளுக்கான பாக்ஸ் நடுவில் (Center) தெரிவதற்கான மாற்றங்கள் */
         .contact-box {
             background-color: #f7f9fa;
             padding: 15px 20px;
-            border-left: 5px solid #1a5f7a;
-            border-radius: 4px;
+            border-top: 4px solid #1a5f7a;
+            border-radius: 8px;
             margin-top: 30px;
             border: 1px solid #dee2e6;
-            border-left-width: 5px;
+            border-top-width: 4px;
+            text-align: center; /* அனைத்து விபரங்களையும் நடுவில் காட்டும் */
         }
         .contact-title {
             font-weight: bold;
             color: #1a5f7a;
-            font-size: 16px;
+            font-size: 17px;
+            margin-bottom: 5px;
         }
         .center-align {
             text-align: center;
@@ -124,7 +135,6 @@
 <body>
 
 <div class="container">
-    <!-- எந்த படமும் இன்றி CSS மூலம் மட்டும் காட்டிய சிறிய Maths Symbol -->
     <div class="math-icon">f(x)</div>
     
     <h2>Online Zoom Class - Official Notice</h2>
@@ -132,7 +142,7 @@
     
     <p><strong>அனைவருக்கும் வணக்கம்.</strong></p>
     
-    <p>இது திரு. பொன்னுத்துரை கமலசிங்கம் ஆசிரியரின் online வகுப்பிற்கான Official Website. இங்கு வகுப்புகள் தொடர்பான தகவல்கள் பதிவிடப்படும்.</p>
+    <p>இது திரு. பொன்னுத்துரை கமலசிங்கம் ஆசிரியரின் online வகுப்பிற்கான Official WhatsApp Group. இங்கு வகுப்புகள் தொடர்பான தகவல்கள் பதிவிடப்படும்.</p>
     
     <p>இவ்வருடம் பரீட்சைக்குத் தயாராகும் மாணவர்களுக்கான ( 2026 A/L , Repeaters ) வகுப்புகள் சில தினங்களில் ஆரம்பிக்கப்பட உள்ளன. அதற்கு அடுத்ததாக 2027 A/L வகுப்புகள் ஆரம்பிக்கப்படும். 2028 A/L மாணவர்களுக்கான வகுப்புகள் O/L பெறுபேறுகள் வெளியான பின்னர் ஆரம்பிக்கப்படும்.</p>
     
@@ -148,18 +158,21 @@
 
     <!-- Google Form Section -->
     <div class="form-notice">
-        📝 Google Form: (இந்த இடத்தில் ஃபார்ம் பதிவிடப்படும். மாணவர்கள் பூர்த்தி செய்யலாம்)
+        📝 Google Form: (நாளை இந்த இடத்தில் ஃபார்ம் பதிவிடப்படும். மாணவர்கள் பூர்த்தி செய்யலாம்)
     </div>
     
     <div class="form-container">
         <!-- நாளை கூகுள் ஃபார்ம் லிங்க் வந்ததும் கீழே உள்ள src="YOUR_GOOGLE_FORM_LINK_HERE" என்பதில் லிங்க்கை மாற்றவும் -->
-        <iframe src="Soon!">Loading…</iframe>
+        <iframe src="YOUR_GOOGLE_FORM_LINK_HERE">Loading…</iframe>
     </div>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - Center Align செய்யப்பட்ட பகுதி -->
     <div class="contact-box">
-        <div class="contact-title">தொடர்புகளுக்கு:</div>
-        <p style="margin: 5px 0; font-size: 16px;"><strong>S.Sethusan</strong> <br> 📞 +94 77 241 4014</p>
+        <div class="contact-title">தொடர்புகளுக்கு</div>
+        <p style="margin: 5px 0; font-size: 16px;">
+            <strong>S.Sethusan</strong><br>
+            📞 +94 77 241 4014
+        </p>
     </div>
 </div>
 
