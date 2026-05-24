@@ -10,14 +10,14 @@
         body {
             font-family: 'Mukta Malar', Arial, sans-serif;
             
-            /* நீங்கள் கொடுத்த Imgur பின்னணிப் படம் (Direct Link) */
-            background-image: url('https://i.imgur.com/vH92aM6.jpeg');
+            /* 1. பின்னணிப் படம் சேர்க்கும் இடம் (Background Photo URL) */
+            background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1470&auto=format&fit=crop');
             
-            /* படம் சீராகத் தெரிவதற்கான அமைப்புகள் */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
+            /* 2. படம் எப்படித் தோன்ற வேண்டும் என்பதற்கான அமைப்புகள் */
+            background-size: cover;          /* படம் முழு ஸ்கிரீனுக்கும் பரவி இருக்கும் */
+            background-position: center;     /* படம் நடுப்பகுதியில் சீராக இருக்கும் */
+            background-attachment: fixed;    /* ஸ்க்ரோல் செய்யும்போது படம் நகராமல் இருக்கும் */
+            background-repeat: no-repeat;    /* படம் மீண்டும் மீண்டும் வராமல் தடுக்கும் */
             
             margin: 0;
             padding: 15px;
@@ -27,11 +27,11 @@
         .container {
             max-width: 700px;
             margin: 40px auto;
-            /* பின்புற படம் லேசாகத் தெரியுமாறு 95% வெள்ளை நிற கண்ணாடி வடிவமைப்பு */
+            /* பாக்ஸ் பின்புறம் உள்ள படம் ஓரளவிற்குத் தெரியும்படி கண்ணாடி போன்ற அமைப்பு (Semi-transparent background) */
             background: rgba(255, 255, 255, 0.95); 
             padding: 30px;
             border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
             border-top: 6px solid #1a5f7a;
         }
         .math-icon {
@@ -110,22 +110,19 @@
             height: 100%;
             border: 0;
         }
-        /* தொடர்புகளுக்கான பாக்ஸ் நடுவில் (Center) தெரிவதற்கான மாற்றங்கள் */
         .contact-box {
             background-color: #f7f9fa;
             padding: 15px 20px;
-            border-top: 4px solid #1a5f7a;
-            border-radius: 8px;
+            border-left: 5px solid #1a5f7a;
+            border-radius: 4px;
             margin-top: 30px;
             border: 1px solid #dee2e6;
-            border-top-width: 4px;
-            text-align: center; /* அனைத்து விபரங்களையும் நடுவில் காட்டும் */
+            border-left-width: 5px;
         }
         .contact-title {
             font-weight: bold;
             color: #1a5f7a;
-            font-size: 17px;
-            margin-bottom: 5px;
+            font-size: 16px;
         }
         .center-align {
             text-align: center;
@@ -166,13 +163,10 @@
         <iframe src="YOUR_GOOGLE_FORM_LINK_HERE">Loading…</iframe>
     </div>
 
-    <!-- Contact Section - Center Align செய்யப்பட்ட பகுதி -->
+    <!-- Contact Section -->
     <div class="contact-box">
-        <div class="contact-title">தொடர்புகளுக்கு</div>
-        <p style="margin: 5px 0; font-size: 16px;">
-            <strong>S.Sethusan</strong><br>
-            📞 +94 77 241 4014
-        </p>
+        <div class="contact-title">தொடர்புகளுக்கு:</div>
+        <p style="margin: 5px 0; font-size: 16px;"><strong>S.Sethusan</strong> <br> 📞 +94 77 241 4014</p>
     </div>
 </div>
 
