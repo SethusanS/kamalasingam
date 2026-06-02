@@ -8,7 +8,6 @@
     <style>
         body {
             font-family: 'Mukta Malar', Arial, sans-serif;
-            /* கணிதப் பின்னணிப் படம் */
             background-image: url('https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1470&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
@@ -18,7 +17,6 @@
             padding: 15px;
             color: #333;
             line-height: 1.6;
-            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,11 +52,17 @@
             text-align: justify;
             margin-bottom: 15px;
         }
-        .highlight-red {
-            color: #d9534f;
+        /* முக்கியமான அறிவிப்பு பாக்ஸ் */
+        .notice-card {
+            background-color: #fff4f4;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
             font-weight: bold;
+            text-align: center;
         }
-        /* டைம் டேபிள் பாக்ஸ் வடிவமைப்பு */
         .timetable-box {
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
@@ -74,7 +78,6 @@
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
-        /* Zoom அறிவுறுத்தல்களுக்கான பாக்ஸ் */
         .instruction-box {
             background-color: #f1f7f9;
             border-left: 5px solid #1a5f7a;
@@ -82,21 +85,6 @@
             border-radius: 6px;
             margin: 25px 0;
         }
-        .instruction-title {
-            font-weight: bold;
-            color: #1a5f7a;
-            font-size: 17px;
-            margin-bottom: 10px;
-        }
-        .instruction-list {
-            margin: 0;
-            padding-left: 20px;
-            font-size: 15.5px;
-        }
-        .instruction-list li {
-            margin-bottom: 8px;
-        }
-        /* பட்டன் அமைப்புகள் */
         .btn-link {
             display: block;
             color: white;
@@ -109,40 +97,14 @@
             transition: 0.3s;
             max-width: 320px;
         }
-        .btn-whatsapp {
-            background-color: #25D366;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
-            transform: translateY(-2px);
-        }
-        .btn-googleform {
-            background-color: #4285F4;
-            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
-        }
-        .btn-googleform:hover {
-            background-color: #1a73e8;
-            transform: translateY(-2px);
-        }
-        /* தொடர்புகளுக்கான பாக்ஸ் */
+        .btn-whatsapp { background-color: #25D366; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
+        .btn-googleform { background-color: #4285F4; box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3); }
         .contact-box {
             background-color: #f7f9fa;
             padding: 15px 20px;
             border-top: 4px solid #1a5f7a;
             border-radius: 8px;
             margin-top: 30px;
-            border: 1px solid #dee2e6;
-            border-top-width: 4px;
-            text-align: center;
-        }
-        .contact-title {
-            font-weight: bold;
-            color: #1a5f7a;
-            font-size: 17px;
-            margin-bottom: 5px;
-        }
-        .center-align {
             text-align: center;
         }
     </style>
@@ -150,30 +112,30 @@
 <body>
 
 <div class="container">
-    
     <h2>Online Zoom Class - Official Notice</h2>
     <div class="subtitle">A/L Combined Mathematics</div>
     
-    <p><strong>அனைவருக்கும் வணக்கம்.</strong></p>
-    
-    <p>இது திரு. பொன்னுத்துரை கமலசிங்கம் ஆசிரியரின் online வகுப்பிற்கான Official Website. இங்கு வகுப்புகள் தொடர்பான தகவல்கள் பதிவிடப்படும்.</p>
-    
-    <p>கட்டணம் செலுத்துதல் தொடர்பான விவரங்கள் பின்னர் அறிவிக்கப்படும். வகுப்புகள் அனைத்தும் zoom இல் நடைபெறும்.</p>
-    
-    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+    <!-- நேரக் கட்டுப்பாடு மற்றும் கட்டண அறிவிப்பு -->
+    <div class="notice-card">
+        ⚠️ வகுப்புகளுக்கு உரிய நேரத்தில் இணையாதவர்கள் வகுப்புகளுக்கு அனுமதிக்கப்படமாட்டாது. <br>
+        Theory class மற்றும் Revision class இரண்டிற்கும் ஒரே கட்டணம் தான் வசூலிக்கப்படும்.
+    </div>
 
+    <p>இது திரு. பொன்னுத்துரை கமலசிங்கம் ஆசிரியரின் online வகுப்பிற்கான Official WhatsApp Group. வகுப்புகள் அனைத்தும் zoom இல் நடைபெறும்.</p>
+    
+    <!-- 2026 A/L டைம் டேபிள் -->
     <div class="timetable-box">
-        <div class="timetable-title">🔴 2026 A/L வகுப்புகள்</div>
-        <p style="margin: 5px 0;"><strong>Revision class:</strong><br>திங்கள் - வெள்ளி : காலை 8.00 - 10.00</p>
-        <p style="margin: 10px 0 5px 0;"><strong>Theory class:</strong> (வழமையான வகுப்பு நேரத்தில் நடைபெறும்)</p>
+        <div class="timetable-title">🔴 2026 A/L வகுப்புகள் 01/06/2026 திங்கட்கிழமை ஆரம்பிக்கப்படும்.</div>
+        <p style="margin: 5px 0;"><strong>Revision class:</strong> திங்கள் - வெள்ளி : காலை 8.00 - 10.00</p>
+        <p style="margin: 10px 0 5px 0;"><strong>Theory class:</strong></p>
         <ul style="margin: 0; padding-left: 20px; font-size: 15.5px;">
             <li>செவ்வாய், வெள்ளி - மாலை 4.00 - 6.00</li>
             <li>சனிக்கிழமை - மாலை 3.00 - 5.00</li>
             <li>ஞாயிறு - காலை 10.00 - 12.00</li>
-            <li>வகுப்புகளுக்கு உரிய நேரத்தில் join பண்ணாதவர்கள் வகுப்புகளுக்கு அனுமதிக்கப்படமாட்டாது. Theory class and revision class எல்லாம் ஒரே கட்டணம் தான்</li>
         </ul>
     </div>
 
+    <!-- 2027 A/L டைம் டேபிள் -->
     <div class="timetable-box">
         <div class="timetable-title">🔴 2027 A/L வகுப்புகள் 03/06/2026 புதன்கிழமை ஆரம்பிக்கப்படும்.</div>
         <p style="margin: 5px 0;"><strong>வழமையான வகுப்பு நேரம்:</strong></p>
@@ -185,41 +147,25 @@
     </div>
 
     <div class="instruction-box">
-        <div class="instruction-title">⚠️ Zoom account தொடர்பான அறிவுறுத்தல்கள்:</div>
-        <ol class="instruction-list">
-            <li>Zoom இல் உங்களுக்கான account இனை உருவாக்கவும் (Sign up).</li>
-            <li>அந்த account இல் நீங்கள் பதிவு செய்த (Sign in) email address இனை Google form இல் பதிவிடவும்.</li>
-            <li>நீங்கள் வழங்கும் email க்கு மட்டுமே zoom இல் இணைய அனுமதி வழங்கப்படும்.</li>
+        <div style="font-weight: bold; color: #1a5f7a; margin-bottom: 10px;">⚠️ Zoom account தொடர்பான அறிவுறுத்தல்கள்:</div>
+        <ol style="margin: 0; padding-left: 20px; font-size: 15.5px;">
+            <li>Zoom இல் account (Sign up) ஒன்றை உருவாக்கவும்.</li>
+            <li>அந்த மின்னஞ்சலை (Email) Google form இல் சரியாகப் பதிவிடவும்.</li>
+            <li>குறிப்பிட்ட மின்னஞ்சலுக்கு மட்டுமே அனுமதி வழங்கப்படும்.</li>
         </ol>
     </div>
 
-    <p style="text-align: center; font-weight: bold; color: #1a5f7a; margin-top: 25px; margin-bottom: 5px;">
-        வகுப்புகளில் இணைய விரும்புவோர் கீழுள்ள Google Form இனை நிரப்பவும்.
-    </p>
-    <p style="text-align: center; font-size: 14px; color: #666; font-weight: bold; margin-bottom: 20px;">
-        (ஏற்கனவே நிரப்பிய மாணவர்கள் மீண்டும் அனுப்பத் தேவையில்லை)
-    </p>
+    <p style="text-align: center; font-weight: bold; color: #1a5f7a;">வகுப்புகளில் இணைய விரும்புவோர் கீழுள்ள படிவத்தை நிரப்பவும்.</p>
 
-    <div class="center-align">
-        <a href="https://chat.whatsapp.com/Lt984K08YFA4MTLYTN5Ye0?s=sw&p=i&ilr=2" target="_blank" class="btn-link btn-whatsapp">
-            WhatsApp Group இல் இணையுங்கள் 💬
-        </a>
-        
-        <a href="https://forms.gle/tGBdEnPtRrjmJtp18" target="_blank" class="btn-link btn-googleform">
-            2026 A/L - Google Form 📝
-        </a>
-        
-        <a href="https://forms.gle/WXSQBWmKi2tgVct19" target="_blank" class="btn-link btn-googleform" style="background-color: #0275d8;">
-            2027 A/L - Google Form 📝
-        </a>
+    <div style="text-align: center;">
+        <a href="https://chat.whatsapp.com/Lt984K08YFA4MTLYTN5Ye0?s=sw&p=i&ilr=2" target="_blank" class="btn-link btn-whatsapp">WhatsApp Group 💬</a>
+        <a href="https://forms.gle/tGBdEnPtRrjmJtp18" target="_blank" class="btn-link btn-googleform">2026 A/L - Google Form 📝</a>
+        <a href="https://forms.gle/WXSQBWmKi2tgVct19" target="_blank" class="btn-link btn-googleform" style="background-color: #0275d8;">2027 A/L - Google Form 📝</a>
     </div>
 
     <div class="contact-box">
-        <div class="contact-title">தொடர்புகளுக்கு</div>
-        <p style="margin: 5px 0; font-size: 16px;">
-            <strong>S.Rejeen</strong><br>
-            📞 +94 72 582 7002
-        </p>
+        <div style="font-weight: bold; color: #1a5f7a;">தொடர்புகளுக்கு</div>
+        <p><strong>S.Sethusan</strong> | 📞 +94 77 241 4014</p>
     </div>
 </div>
 
